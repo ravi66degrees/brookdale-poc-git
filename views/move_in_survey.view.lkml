@@ -793,16 +793,33 @@ view: move_in_survey {
     drill_fields: [detail*]
   }
 
+  measure: Dissatisfied_Ratings {
+    type: count
+    filters: [satisfaction_community: "Dissatisfied"]
+  }
+  measure: Satisfied_Ratings {
+    type: count
+    filters: [satisfaction_community: "Satisfied"]
+  }
+  measure: Very_dissatisfied_Ratings {
+    type: count
+    filters: [satisfaction_community: "Very dissatisfied"]
+  }
+  measure: Very_satisfied_Ratings {
+    type: count
+    filters: [satisfaction_community: "Very satisfied"]
+  }
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
-	influencer_first_name,
-	recipient_last_name,
-	influencer_last_name,
-	prospect_last_name,
-	recipient_first_name,
-	prospect_first_name
-	]
+  influencer_first_name,
+  recipient_last_name,
+  influencer_last_name,
+  prospect_last_name,
+  recipient_first_name,
+  prospect_first_name
+  ]
   }
 
 }
