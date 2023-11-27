@@ -2,7 +2,7 @@
 connection: "brookdale-poc"
 
 # include all the views
-include: "/views/**/*.view.lkml"
+include: "/base/**/*.view.lkml"
 
 # Datagroups define a caching policy for an Explore. To learn more,
 # use the Quick Help panel on the right to see documentation.
@@ -27,9 +27,8 @@ persist_with: brookdale_poc_default_datagroup
 
 explore: resident_family_survey {}
 
-explore: move_in_survey {}
+explore: move_in_survey{}
 
 explore: post_visit_survey {}
 
 explore: move_out_survey {}
-

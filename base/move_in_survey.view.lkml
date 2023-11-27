@@ -2,7 +2,7 @@
 view: move_in_survey {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `brookdale_poc.move_in_survey` ;;
+  sql_table_name: `client-brookdale-poc-20231120.brookdale_poc.move_in_survey` ;;
 
   # No primary key is defined for this view. In order to join this view in an Explore,
   # define primary_key: yes on a dimension that has no repeated values.
@@ -793,33 +793,16 @@ view: move_in_survey {
     drill_fields: [detail*]
   }
 
-  measure: Dissatisfied_Ratings {
-    type: count
-    filters: [satisfaction_community: "Dissatisfied"]
-  }
-  measure: Satisfied_Ratings {
-    type: count
-    filters: [satisfaction_community: "Satisfied"]
-  }
-  measure: Very_dissatisfied_Ratings {
-    type: count
-    filters: [satisfaction_community: "Very dissatisfied"]
-  }
-  measure: Very_satisfied_Ratings {
-    type: count
-    filters: [satisfaction_community: "Very satisfied"]
-  }
-
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
-  influencer_first_name,
-  recipient_last_name,
-  influencer_last_name,
-  prospect_last_name,
-  recipient_first_name,
-  prospect_first_name
-  ]
+	influencer_first_name,
+	recipient_last_name,
+	influencer_last_name,
+	prospect_last_name,
+	recipient_first_name,
+	prospect_first_name
+	]
   }
 
 }
