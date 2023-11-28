@@ -28,6 +28,17 @@ view: post_visit_area_feedback {
     ;;
   }
 
+  dimension: response_id_area {
+    type: string
+    primary_key: yes
+    sql: ${TABLE}.response_id||${TABLE}.area ;;
+  }
+
+  dimension: response_id {
+    type: string
+    sql: ${TABLE}.response_id ;;
+  }
+
   dimension: area {
     type: string
     sql: ${TABLE}.area ;;

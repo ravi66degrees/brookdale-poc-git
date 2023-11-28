@@ -4,6 +4,9 @@ connection: "brookdale-poc"
 # include all the views
 include: "/base/**/*.view.lkml"
 
+# include all the refinements
+include: "/refinements/**/*.lkml"
+
 # include all the explores
 include: "/explores/**/*.lkml"
 
