@@ -2,10 +2,10 @@
 connection: "brookdale-poc"
 
 # include all the views
-include: "/base/**/*.view.lkml"
+# include: "/base/**/*.view.lkml"
 
 # include all the refinements
-include: "/refinements/**/*.lkml"
+# include: "/refinements/**/*.lkml"
 
 # include all the explores
 include: "/explores/**/*.lkml"
@@ -31,10 +31,10 @@ persist_with: brookdale_poc_default_datagroup
 # Typically, join parameters require that you define the join type, join relationship, and a sql_on clause.
 # Each joined view also needs to define a primary key.
 
-explore: resident_family_survey {}
+# explore: resident_family_survey {}
 
-explore: move_in_survey{}
+# explore: move_in_survey{}
 
 # explore: post_visit_survey {}
 
-explore: move_out_survey {}
+# explore: move_out_survey {}
