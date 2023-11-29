@@ -2,10 +2,10 @@ view: post_visit_area_feedback {
 
   derived_table: {
     sql:
-        select response_id, 'Information Needed' as area, information_needed as feedback
-        from `client-brookdale-poc-20231120.brookdale_poc.post_visit_survey`
-        where information_needed in ('Agree', 'Disagree')
-        union all
+        --select response_id, 'Information Needed' as area, information_needed as feedback
+        --from `client-brookdale-poc-20231120.brookdale_poc.post_visit_survey`
+        --where information_needed in ('Agree', 'Disagree')
+        --union all
         select response_id, 'Worth the Cost' as area, worth_the_cost as feedback
         from `client-brookdale-poc-20231120.brookdale_poc.post_visit_survey`
         where worth_the_cost in ('Agree', 'Disagree')
@@ -60,7 +60,7 @@ view: post_visit_area_feedback {
 
   measure: agree_percentage {
     type: number
-    value_format: "0.00\%"
+    value_format_name: percent_2
     sql: ${agree}/${total} ;;
   }
 
