@@ -18,8 +18,8 @@ view: move_out_community_score {
           case when date(qualtrics_move_out_surveys.start_date)  >= ((DATE_ADD(DATE_TRUNC(ld.latest_date, MONTH), INTERVAL -11 MONTH))) and
                     date(qualtrics_move_out_surveys.start_date)  < ((DATE_ADD(DATE_TRUNC(ld.latest_date, MONTH), INTERVAL -5 MONTH))) then 'Y' else 'N' end as pr_3m,
           case when date(qualtrics_move_out_surveys.start_date)  <= ((DATE_ADD(DATE_TRUNC(ld.latest_date, MONTH), INTERVAL -12 MONTH))) then 'Y' else 'N' end as py_3m
-      FROM `poc-move-out-analytics.analytics_survey_data.qualtrics_move_out_surveys`  AS qualtrics_move_out_surveys
-      cross join (select max(date(qualtrics_move_out_surveys.start_date)) as latest_date from `poc-move-out-analytics.analytics_survey_data.qualtrics_move_out_surveys`  AS qualtrics_move_out_surveys) ld
+      FROM `brookdale_poc.move_out_survey`  AS qualtrics_move_out_surveys
+      cross join (select max(date(qualtrics_move_out_surveys.start_date)) as latest_date from `brookdale_poc.move_out_survey`  AS qualtrics_move_out_surveys) ld
       WHERE date(qualtrics_move_out_surveys.start_date) >= ((DATE_ADD(DATE_TRUNC(ld.latest_date, MONTH), INTERVAL -17 MONTH)))
       GROUP BY 1,2, 4) a
       group by 1
