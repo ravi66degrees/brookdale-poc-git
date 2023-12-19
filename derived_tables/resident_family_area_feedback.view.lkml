@@ -2,51 +2,51 @@ view: resident_family_area_feedback {
 
   derived_table: {
     sql:
-      select response_id, 'community_management_cares' as area, community_management_cares as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where community_management_cares <> ''
+      select response_id, 'community_management_cares' as area, community_management_cares as feedback from `brookdale_poc.resident_family_survey` where community_management_cares <> ''
       union all
-      select response_id, 'community_managers_value_service' as area, community_managers_value_service as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where community_managers_value_service <> ''
+      select response_id, 'community_managers_value_service' as area, community_managers_value_service as feedback from `brookdale_poc.resident_family_survey` where community_managers_value_service <> ''
       union all
-      select response_id, 'issues_resolved_timely' as area, issues_resolved_timely as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where issues_resolved_timely <> ''
+      select response_id, 'issues_resolved_timely' as area, issues_resolved_timely as feedback from `brookdale_poc.resident_family_survey` where issues_resolved_timely <> ''
       union all
-      select response_id, 'community_runs_smoothly' as area, community_runs_smoothly as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where community_runs_smoothly <> ''
+      select response_id, 'community_runs_smoothly' as area, community_runs_smoothly as feedback from `brookdale_poc.resident_family_survey` where community_runs_smoothly <> ''
       union all
-      select response_id, 'staff_know_you' as area, staff_know_you as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where staff_know_you <> ''
+      select response_id, 'staff_know_you' as area, staff_know_you as feedback from `brookdale_poc.resident_family_survey` where staff_know_you <> ''
       union all
-      select response_id, 'staff_treat_you_well' as area, staff_treat_you_well as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where staff_treat_you_well <> ''
+      select response_id, 'staff_treat_you_well' as area, staff_treat_you_well as feedback from `brookdale_poc.resident_family_survey` where staff_treat_you_well <> ''
       union all
-      select response_id, 'choices_and_preferences_met' as area, choices_and_preferences_met as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where choices_and_preferences_met <> ''
+      select response_id, 'choices_and_preferences_met' as area, choices_and_preferences_met as feedback from `brookdale_poc.resident_family_survey` where choices_and_preferences_met <> ''
       union all
-      select response_id, 'trust_staff' as area, trust_staff as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where trust_staff <> ''
+      select response_id, 'trust_staff' as area, trust_staff as feedback from `brookdale_poc.resident_family_survey` where trust_staff <> ''
       union all
-      select response_id, 'satisfaction_with_care' as area, satisfaction_with_care as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where satisfaction_with_care <> ''
+      select response_id, 'satisfaction_with_care' as area, satisfaction_with_care as feedback from `brookdale_poc.resident_family_survey` where satisfaction_with_care <> ''
       union all
-      select response_id, 'engagement_benefits_wellbeing' as area, engagement_benefits_wellbeing as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where engagement_benefits_wellbeing <> ''
+      select response_id, 'engagement_benefits_wellbeing' as area, engagement_benefits_wellbeing as feedback from `brookdale_poc.resident_family_survey` where engagement_benefits_wellbeing <> ''
       union all
-      select response_id, 'satisfaction_with_friendships' as area, satisfaction_with_friendships as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where satisfaction_with_friendships <> ''
+      select response_id, 'satisfaction_with_friendships' as area, satisfaction_with_friendships as feedback from `brookdale_poc.resident_family_survey` where satisfaction_with_friendships <> ''
       union all
-      select response_id, 'feel_safe_and_secure' as area, feel_safe_and_secure as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where feel_safe_and_secure <> ''
+      select response_id, 'feel_safe_and_secure' as area, feel_safe_and_secure as feedback from `brookdale_poc.resident_family_survey` where feel_safe_and_secure <> ''
       union all
-      select response_id, 'feel_living_with_purpose' as area, feel_living_with_purpose as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where feel_living_with_purpose <> ''
+      select response_id, 'feel_living_with_purpose' as area, feel_living_with_purpose as feedback from `brookdale_poc.resident_family_survey` where feel_living_with_purpose <> ''
       union all
-      select response_id, 'dining_staff_listen_food_preferences' as area, dining_staff_listen_food_preferences as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where dining_staff_listen_food_preferences <> ''
+      select response_id, 'dining_staff_listen_food_preferences' as area, dining_staff_listen_food_preferences as feedback from `brookdale_poc.resident_family_survey` where dining_staff_listen_food_preferences <> ''
       union all
-      select response_id, 'satisfaction_with_dining_service' as area, satisfaction_with_dining_service as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where satisfaction_with_dining_service <> ''
+      select response_id, 'satisfaction_with_dining_service' as area, satisfaction_with_dining_service as feedback from `brookdale_poc.resident_family_survey` where satisfaction_with_dining_service <> ''
       union all
-      select response_id, 'satisfaction_with_food_quality' as area, satisfaction_with_food_quality as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where satisfaction_with_food_quality <> ''
+      select response_id, 'satisfaction_with_food_quality' as area, satisfaction_with_food_quality as feedback from `brookdale_poc.resident_family_survey` where satisfaction_with_food_quality <> ''
       union all
-      select response_id, 'satisfaction_with_food_variety' as area, satisfaction_with_food_variety as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where satisfaction_with_food_variety <> ''
+      select response_id, 'satisfaction_with_food_variety' as area, satisfaction_with_food_variety as feedback from `brookdale_poc.resident_family_survey` where satisfaction_with_food_variety <> ''
       union all
-      select response_id, 'common_areas_clean' as area, common_areas_clean as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where common_areas_clean <> ''
+      select response_id, 'common_areas_clean' as area, common_areas_clean as feedback from `brookdale_poc.resident_family_survey` where common_areas_clean <> ''
       union all
-      select response_id, 'housekeeping_satisfaction' as area, housekeeping_satisfaction as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where housekeeping_satisfaction <> ''
+      select response_id, 'housekeeping_satisfaction' as area, housekeeping_satisfaction as feedback from `brookdale_poc.resident_family_survey` where housekeeping_satisfaction <> ''
       union all
-      select response_id, 'transportation_meets_needs' as area, transportation_meets_needs as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where transportation_meets_needs <> ''
+      select response_id, 'transportation_meets_needs' as area, transportation_meets_needs as feedback from `brookdale_poc.resident_family_survey` where transportation_meets_needs <> ''
       union all
-      select response_id, 'satisfaction_with_family_visits' as area, satisfaction_with_family_visits as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where satisfaction_with_family_visits <> ''
+      select response_id, 'satisfaction_with_family_visits' as area, satisfaction_with_family_visits as feedback from `brookdale_poc.resident_family_survey` where satisfaction_with_family_visits <> ''
       union all
-      select response_id, 'bill_for_care_accurate' as area, bill_for_care_accurate as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where bill_for_care_accurate <> ''
+      select response_id, 'bill_for_care_accurate' as area, bill_for_care_accurate as feedback from `brookdale_poc.resident_family_survey` where bill_for_care_accurate <> ''
       union all
-      select response_id, 'satisfaction_with_value' as area, satisfaction_with_value as feedback from `poc-move-out-analytics.analytics_survey_data.qualtrics_family_resident_surveys` where satisfaction_with_value <> ''
+      select response_id, 'satisfaction_with_value' as area, satisfaction_with_value as feedback from `brookdale_poc.resident_family_survey` where satisfaction_with_value <> ''
     ;;
   }
 

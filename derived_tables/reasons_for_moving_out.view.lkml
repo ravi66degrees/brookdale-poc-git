@@ -13,7 +13,8 @@ view: reasons_for_moving_out {
               community_state,
               SPLIT(select_reasons_for_moving_that_apply, ',') AS reasons_array
           FROM
-              `poc-move-out-analytics.analytics_survey_data.qualtrics_move_out_surveys`
+              --`poc-move-out-analytics.analytics_survey_data.qualtrics_move_out_surveys`
+              `brookdale_poc.move_out_survey`
       )
 
       SELECT
