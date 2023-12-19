@@ -2,8 +2,9 @@ view: community {
   derived_table: {
     sql:
         select distinct community_bu_id as community_id, community_name, dma_code, dma_description, bu_division as division
-        from `poc-move-out-analytics.analytics_survey_data.qualtrics_post_visit_surveys`
-    ;;
+        --from `poc-move-out-analytics.analytics_survey_data.qualtrics_post_visit_surveys`
+        from `brookdale_poc.post_visit_survey`
+            ;;
   }
 
   dimension: community_id {
