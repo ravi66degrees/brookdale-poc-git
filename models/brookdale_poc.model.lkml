@@ -8,4 +8,4 @@ datagroup: brookdale_poc_default_datagroup {
 persist_with: brookdale_poc_default_datagroup
 
 include: "/explorers/**/*.lkml"
-# include: "/dashboards/**/*.dashboard.lookml"
+ include: "/dashboards/**/*.dashboard.lookml"
