@@ -1,7 +1,9 @@
 view: move_out_comment_topic {
   derived_table: {
     sql:  SELECT a.response_id, topic
-          FROM `poc-move-out-analytics.analytics_survey_data.qualtrics_move_out_surveys`  a
+          --FROM `poc-move-out-analytics.analytics_survey_data.qualtrics_move_out_surveys`  a
+          FROM `brookdale_poc.move_out_survey`  a
+
           cross join unnest(split(a.improvement_genai_topics,',') ) as topic
           where improvement_genai_topics is not null
       ;;
